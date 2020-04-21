@@ -1,17 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <SEO title="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Img fluid={data.file.childImageSharp.fluid} alt="404" />
     </Layout>
   )
 }
@@ -20,9 +17,11 @@ export default NotFoundPage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
+    file(relativePath: { eq: "404.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 980, quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

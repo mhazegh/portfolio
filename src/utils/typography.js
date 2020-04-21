@@ -6,6 +6,16 @@ Wordpress2016.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    p: {
+      color: `#736F6E`,
+    },
+    footer: {
+      color: `#736F6E`,
+    },
+    ul: {
+      marginBottom: `0px`,
+      marginLeft: `0px !important`,
+    },
   }
 }
 
