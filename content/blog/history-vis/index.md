@@ -9,6 +9,6 @@ This is a map of my browser history over the course of one week. Each line repre
 
 To get my browser history in an accessible format I used the History Export add-on in Firefox to convert my history into a JSON message. Then I wrote a python script which parses and cleans the urls, as well as fetches the IP addresses associated with each.
 
-Once I had a list of IP addresses for each website, I collected the latitude-longitude points by using the IP Address Geolocation API. After customizing R code from Flowing Data to fit my data, the points were mapped and connected using great circle routes.
+Once I had a list of IP addresses for each website, I collected the latitude-longitude points by using the IP Address Geolocation API. After customizing R code from [Flowing Data](https://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/) to fit my data, the points were mapped and connected using great circle routes.
 
 ![History Vis](./history_vis.jpg)
